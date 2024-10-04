@@ -81,7 +81,9 @@ public class Collection {
     }
 
     public func load() throws {
-        let svdbDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("SVDB")
+		let svdbDirectory = URL.documentsDirectory.appendingPathComponent(
+			"SVDB"
+		)
         let fileURL = svdbDirectory.appendingPathComponent("\(name).json")
 
         // Check if file exists
