@@ -11,7 +11,7 @@ import NaturalLanguage
 
 @available(macOS 10.15, *)
 @available(iOS 13.0, *)
-public class Collection {
+public class Collection: Codable {
     private var documents: [UUID: Document] = [:]
     private let name: String
 
